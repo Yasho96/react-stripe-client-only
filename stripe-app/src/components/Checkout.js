@@ -5,20 +5,22 @@ import ProductImage from "../images/product-image.jpg";
 import "../styles/styles.css";
 
 let stripePromise;
-
+//const [strToken, setStrToken] = useState(null);
 const getStripe = () => {
   if (!stripePromise) {
     stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
+    //setStrToken(stripePromise)
   }
-
+  //console.log(strToken);
   return stripePromise;
+  
 };
-
+//console.log(stripePromise.id);
 const Checkout = () => {
   const [stripeError, setStripeError] = useState(null);
   const [isLoading, setLoading] = useState(false);
   const item = {
-    price: 'price_1KgNSnB0nTiBgHHwMhbfW105',
+    price: 'price_1Kh9utIaqHuGTv911YTAI2ur',
     quantity: 1
   };
 
